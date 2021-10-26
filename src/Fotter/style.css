@@ -1,0 +1,19 @@
+.footer {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.footer__paragraph {
+    color: hsl(0, 0%, 40%);
+    text-align: center;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+}
+
+.footer__link:hover {
+    color: hsl(0, 0%, 60%);
+}
