@@ -27,6 +27,10 @@ function App() {
     ]);
   };
 
+  const removeTask = (taskId) => {
+    setTasks(tasks => tasks.filter(task => task.id !== taskId));
+  };
+
   const toggleTaskDone = (taskId) => {
     setTasks(tasks => tasks.map(task => {
       if (task.id === taskId) {
@@ -58,6 +62,7 @@ function App() {
               tasks={tasks}
               hideDoneTasks={hideDoneTasks}
               toggleTaskDone={toggleTaskDone}
+              removeTask={removeTask}
             />
           }
           extraHeaderContent={
