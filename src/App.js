@@ -27,6 +27,16 @@ function App() {
     ]);
   };
 
+  const toggleTaskDone = (taskId) => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === taskId) {
+        return { ...task, isDone: !task.isDone };
+      }
+
+      return task;
+    }));
+  };
+
   return (
     <React.Fragment>
       <Container>
@@ -39,8 +49,20 @@ function App() {
         />
         <Section
           title="Lista zadań"
-          body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
-          extraHeaderContent={<Buttons hideDoneTasks={hideDoneTasks} tasks={tasks} toggleHideDoneTasks={toggleHideDoneTasks} />}
+          body={
+            <Tasks
+              tasks={tasks}
+              hideDoneTasks={hideDoneTasks}
+              toggleTaskDone={toggleTaskDone}
+            />
+          }
+          extraHeaderContent={
+            <Buttons
+              hideDoneTasks={hideDoneTasks}
+              tasks={tasks}
+              toggleHideDoneTasks={toggleHideDoneTasks}
+            />
+          }
         />
       </Container>
       <Fotter />
