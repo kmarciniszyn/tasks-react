@@ -37,6 +37,10 @@ function App() {
     }));
   };
 
+  const markAllTasksDone = () => {
+    setTasks(tasks => tasks.map(task => ({ ...task, isDone: true, })));
+  };
+
   return (
     <React.Fragment>
       <Container>
@@ -61,6 +65,7 @@ function App() {
               hideDoneTasks={hideDoneTasks}
               tasks={tasks}
               toggleHideDoneTasks={toggleHideDoneTasks}
+              markAllTasksDone={markAllTasksDone}
             />
           }
         />
