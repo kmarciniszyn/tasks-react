@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Container from "./Container";
-import Fotter from "./Fotter";
+import Footer from "./Footer";
 import Form from "./Form";
 import Section from "./Section";
 import Buttons from "./Buttons";
@@ -87,7 +87,7 @@ function App() {
           }
         />
       </Container>
-      <Fotter />
+      <Footer />
     </React.Fragment>
   );
 }

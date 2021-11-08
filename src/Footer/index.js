@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Fotter = () => (
+const Footer = () => (
     <footer className="footer">
         <p className="footer__paragraph">
             Aplikacja wykonana w ramach kursu 
@@ -11,4 +11,4 @@ const Fotter = () => (
     </footer>
 );
 
-export default Fotter;
+export default Footer;
