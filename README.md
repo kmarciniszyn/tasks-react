@@ -3,7 +3,7 @@
 ## Technologis
 - React
 - Create React App
-- BEM
+- Styled Components
 
 ## Demo
 You can try this app [here](https://kmarciniszyn.github.io/tasks-react/)

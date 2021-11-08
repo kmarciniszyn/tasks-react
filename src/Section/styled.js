@@ -1,27 +1,27 @@
-.section {
+import styled from "styled-components";
+
+export const Wrapper = styled.section`
     background-color: white;
     box-shadow: 0px 0px 2px 0px #ddd;
     margin: 10px 0;
-}
+`;
 
-.section__header {
+export const Header = styled.header`
     border-bottom: 2px solid #ddd;
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 10px;
-}
 
-@media(max-width: 767px){
-    .section__header{
+    @media (max-width: 767px){
         grid-template-columns: 1fr;
     }
-}
+`;
 
-.section__title {
+export const Title = styled.h2`
     margin: 0;
-}
+`;
 
-.section__body {
+export const Body = styled.div`
     padding: 10px;
-}
+`;
