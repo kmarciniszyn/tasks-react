@@ -34,7 +34,7 @@ export const Button = styled.button`
         }
     `}
 
-    ${({ toggleTask }) => toggleTask && css`
+    ${({ toggleDone }) => toggleDone && css`
         background-color: hsl(120, 100%, 25%);
 
         &:hover {
