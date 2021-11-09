@@ -11,7 +11,7 @@ export const Item = styled.li`
     grid-template-columns: auto 1fr auto;
     align-items: center;
     padding: 10px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.lightGray};
     grid-gap: 20px;
 
     ${({ hidden }) => hidden && css`
@@ -20,27 +20,23 @@ export const Item = styled.li`
 `;
 
 export const Button = styled.button`
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     border: none;
     width: 30px;
     height: 30px;
-    transition: 0.5s;
+    transition: filter 0.5s;
 
     ${({ remove }) => remove && css`
-        background-color: hsl(0, 100%, 40%);
-
-        &:hover{
-            background-color: hsl(0, 100%, 60%);
-        }
+        background-color: ${({ theme }) => theme.colors.red};
     `}
 
     ${({ toggleDone }) => toggleDone && css`
-        background-color: hsl(120, 100%, 25%);
-
-        &:hover {
-            background-color: hsl(120, 100%, 35%);
-        }
+        background-color: ${({ theme }) => theme.colors.green};
     `}
+
+    &:hover {
+        filter: brightness(120%);
+    }
 `;
 
 export const Content = styled.span`

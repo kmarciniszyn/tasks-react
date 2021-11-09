@@ -7,15 +7,16 @@ export const Wrapper = styled.footer`
 `;
 
 export const Paragraph = styled.p`
-    color: hsl(0, 0%, 40%);
+    color: ${({ theme }) => theme.colors.mediumGray};
     text-align: center;
 `;
 
 export const Link = styled.a`
     text-decoration: none;
-    color: hsl(0, 0%, 20%);
+    color: ${({ theme }) => theme.colors.darkGray};
+    transition: filter 0.5s;
 
     &:hover {
-        color: hsl(0, 0%, 60%);
+        filter: brightness(140%);
     }
 `;

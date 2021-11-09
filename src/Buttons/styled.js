@@ -7,24 +7,24 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
     background-color: transparent;
-    color: teal;
+    color: ${({ theme }) => theme.colors.primary};
     border: none;
     padding: 10px;
-    transition: color 0.5s;
+    transition: filter 0.5s;
 
-    @media(max-width: 767px){
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobileMaxWidth}px){
         flex-basis: 100%;
     }
 
     &:hover {
-        color: hsl(180, 100%, 40%);
+        filter: brightness(140%);
     }
 
     &:active {
-        color: hsl(180, 100%, 50%);
+        filter: brightness(150%);
     }
 
     &:disabled {
-        color: #ddd;
+        color: ${({ theme }) => theme.colors.gray};
     }
 `;

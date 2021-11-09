@@ -6,29 +6,29 @@ export const Wrapper = styled.form`
     grid-gap: 20px;
     padding: 10px;
 
-    @media(max-width: 767px) {    
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobileMaxWidth}px) {    
         grid-template-columns: 1fr;
     }
 `;
 
 export const Field = styled.input`
     padding: 10px;
-    border: 2px solid #ddd;
+    border: 2px solid ${({ theme }) => theme.colors.gray};
 `;
 
 export const Submit = styled.input`
     padding: 10px;
-    background-color: teal;
-    color: white;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.white};
     border: none;
-    transition: 0.5s;
+    transition: filter 0.5s;
 
     &:hover {
-        background-color: hsl(180, 100%, 30%);
+        filter: brightness(140%);
         transform: scale(1.1);
     }
 
     &:active {
-        background-color: hsl(180, 100%, 35%);
+        filter: brightness(150%);
     }
 `;
