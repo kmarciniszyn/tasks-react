@@ -4,6 +4,7 @@
 - React
 - Create React App
 - Styled Components
+- Custom Hook
 
 ## Demo
 You can try this app [here](https://kmarciniszyn.github.io/tasks-react/)
