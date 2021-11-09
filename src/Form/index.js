@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Wrapper, Field, Submit } from './styled';
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+
+    const newTaskInputRef = useRef(null);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -10,6 +12,7 @@ const Form = ({ addNewTask }) => {
         if (newTaskContent !== "") {
             addNewTask(newTaskContent.trim());
             setNewTaskContent("");
+            newTaskInputRef.current.focus();
         }
     };
 
@@ -18,6 +21,7 @@ const Form = ({ addNewTask }) => {
             onSubmit={onFormSubmit}
         >
             <Field
+                ref={newTaskInputRef}
                 placeholder="Co jest do zrobienia?"
                 name="newTask"
                 value={newTaskContent}
