@@ -1,10 +1,13 @@
+import { nanoid } from '@reduxjs/toolkit';
 import { useState, useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTask } from '../tasksSlice';
 import { Wrapper, Field, Submit } from './styled';
 
-const Form = ({ addNewTask }) => {
+const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
-
     const newTaskInputRef = useRef(null);
+    const dispatch = useDispatch();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -12,7 +15,12 @@ const Form = ({ addNewTask }) => {
         const trimmedNewTaskContent = newTaskContent.trim();
 
         if (trimmedNewTaskContent !== "") {
-            addNewTask(trimmedNewTaskContent);
+            dispatch(addTask({
+                id: nanoid(),
+                content: trimmedNewTaskContent,
+                isDone: false,
+            }));
+
             setNewTaskContent("");
             newTaskInputRef.current.focus();
         }
