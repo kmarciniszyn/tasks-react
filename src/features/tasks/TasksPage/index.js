@@ -8,7 +8,6 @@ import TasksList from "../TasksList";
 import Header from "../../../common/Header";
 
 const TasksPage = () => (
-  <>
     <Container>
       <Header
         title="Lista zadań"
@@ -23,8 +22,6 @@ const TasksPage = () => (
         extraHeaderContent={<Buttons />}
       />
     </Container>
-    <Footer />
-  </>
 );
 
 

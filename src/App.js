@@ -4,6 +4,7 @@ import { StyledNavLink, StyledNav, StyledUl, StyledLi } from './styled';
 import Author from './features/author/Author';
 import TasksPage from './features/tasks/TasksPage';
 import TaskPage from './features/tasks/TaskPage';
+import Footer from './common/Footer';
 
 const App = () => (
     <HashRouter>
@@ -35,6 +36,7 @@ const App = () => (
                 <Redirect to="/zadania" />
             </Route>
         </Switch>
+        <Footer/>
     </HashRouter>
 );
 
