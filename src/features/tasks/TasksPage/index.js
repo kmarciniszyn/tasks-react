@@ -1,11 +1,11 @@
 import React from "react";
 import Container from "../../../common/Container";
-import Footer from "../../../common/Footer";
-import Form from "../Form";
 import Section from "../../../common/Section";
 import Buttons from "../Buttons";
 import TasksList from "../TasksList";
 import Header from "../../../common/Header";
+import Search from "./Search";
+import Form from "./Form";
 
 const TasksPage = () => (
     <Container>
@@ -15,6 +15,10 @@ const TasksPage = () => (
       <Section
         title="Dodaj nowe zadanie"
         body={<Form />}
+      />
+      <Section
+        title="Wyszukiwarka"
+        body={<Search />}
       />
       <Section
         title="Lista zadań"

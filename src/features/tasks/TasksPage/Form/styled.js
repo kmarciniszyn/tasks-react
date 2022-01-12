@@ -11,11 +11,6 @@ export const Wrapper = styled.form`
     }
 `;
 
-export const Field = styled.input`
-    padding: 10px;
-    border: 2px solid ${({ theme }) => theme.colors.gray};
-`;
-
 export const Submit = styled.input`
     padding: 10px;
     background-color: ${({ theme }) => theme.colors.primary};
