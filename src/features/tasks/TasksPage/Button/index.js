@@ -1,15 +1,9 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-`;
-
-export const Button = styled.button`
+const Button = styled.button`
     background-color: transparent;
     color: ${({ theme }) => theme.colors.primary};
     border: none;
-    padding: 10px;
     transition: filter 0.5s;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobileMaxWidth}px){
@@ -28,3 +22,5 @@ export const Button = styled.button`
         color: ${({ theme }) => theme.colors.gray};
     }
 `;
+
+export default Button;

@@ -24,6 +24,10 @@ const tasksSlice = createSlice({
         markAllTasksDone: ({ tasks }) => {
             tasks.map(task => task.isDone = true);
         },
+        fetchSampleTasks: () =>{},
+        setTasks: (state, {payload: tasks}) => {
+            state.tasks = tasks;
+        },
     }
 });
 
@@ -52,6 +56,8 @@ export const {
     toggleTaskDone,
     removeTask,
     markAllTasksDone,
+    fetchSampleTasks,
+    setTasks,
 } = tasksSlice.actions;
 
 export default tasksSlice.reducer;
