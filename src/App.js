@@ -5,23 +5,24 @@ import TasksPage from './features/tasks/TasksPage';
 import TaskPage from './features/tasks/TaskPage';
 import Footer from './common/Footer';
 import Navigation from './Navigation';
+import { toTasks, toTask, toAuthor } from './routes';
 
 const App = () => (
     <HashRouter>
         <Navigation/>
         
         <Switch>
-            <Route path="/autor">
+            <Route path={toAuthor()}>
                 <Author />
             </Route>
-            <Route path="/zadania/:id">
+            <Route path={toTask()}>
                 <TaskPage />
             </Route>
-            <Route path="/zadania">
+            <Route path={toTasks()}>
                 <TasksPage />
             </Route>
             <Route path="/">
-                <Redirect to="/zadania" />
+                <Redirect to={toTasks()} />
             </Route>
         </Switch>
         <Footer/>

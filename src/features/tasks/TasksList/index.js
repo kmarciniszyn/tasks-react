@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { List, Item, Button, Content, StyledLink } from './styled';
 import { toggleTaskDone, removeTask, selectHideDoneTasks, selectTaskByQuery } from '../tasksSlice';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import { toTask } from '../../../routes';
 
 const TasksList = () => {
     const searchParams = new URLSearchParams(useLocation().search);
@@ -27,7 +28,9 @@ const TasksList = () => {
                     <Content
                         isDone={task.isDone}
                     >
-                        <StyledLink to={`/zadania/${task.id}`}>{task.content}</StyledLink>
+                        <StyledLink to={toTask({ id: task.id })}>
+                            {task.content}
+                        </StyledLink>
                     </Content>
                     <Button
                         remove
